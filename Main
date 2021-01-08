@@ -1,0 +1,57 @@
+import java.util.Scanner;
+
+class Main 
+{
+  public static void main(String[] args) {
+    Scanner scanner = new Scanner(System.in);
+    int counterA = 0;
+    int counterE = 0;
+    int counterI = 0;
+    int counterU = 0;
+    int counterO = 0;
+    int counterPunc = 0;
+    int counterSpace = 0;
+    int counterCon = 0;
+    System.out.println("Enter a string: ");
+    String input = scanner.nextLine().toLowerCase();
+    
+    
+    for (int i = 0; i < input.length(); i++) {
+      char c = input.charAt(i);
+      if (c == 'a') {
+        counterA++;
+      }
+      if (c == 'e') {
+        counterE++;
+      }
+      if (c == 'i') {
+        counterI++;
+      }
+      if ( c== 'u') {
+        counterU++;
+      }
+      if (c == 'o') {
+        counterO++;
+      }
+      if (c == ' ') {
+        counterSpace++;
+      }
+      if (c > 97 && c < 122){
+        counterPunc++;
+      } else {
+        counterCon++;
+      }
+    }
+    System.out.println("There are " + counterA + " A's.");
+    System.out.println("There are " + counterE + " E's.");
+    System.out.println("There are " + counterI + " I's.");
+    System.out.println("There are " + counterO + " O's.");
+    System.out.println("There are " + counterU + " U's.");
+    System.out.println("There are " + counterSpace + " spaces.");
+    System.out.println("There are " + counterPunc + " punctuation marks.");
+    System.out.println("There are " + counterCon + " constanants.");
+
+
+
+  }
+}
